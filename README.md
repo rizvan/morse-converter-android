@@ -6,5 +6,5 @@ A writtenMorse and normal morse code converter for Android. You can find more in
 Trello Boards
 --------------------------
 
-Feature Board: https://trello.com/b/SGMIGVbI
+Feature Board: https://trello.com/b/SGMIGVbI<br>
 Bug Board: https://trello.com/b/s4whMQb9
