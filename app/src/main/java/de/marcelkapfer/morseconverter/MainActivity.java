@@ -29,7 +29,7 @@ public class MainActivity extends FragmentActivity {
     public String[] fragments =  new String[] {"R.id.main", "R.id.morse", "R.id.about"};
     private static int[] fragment = new int[] {R.layout.fragment_main, R.layout.fragment_morse, R.layout.fragment_about };
     public static int mainPosition;
-	
+
 	public final static String EXTRA_MESSAGE = "de.marcelkapfer.morseconverter.MESSAGE";
 	public String tfOutput = "";
 	int lastFragment = 0;
@@ -91,22 +91,22 @@ public class MainActivity extends FragmentActivity {
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        	
+
         	changeFragment(position);
         	mainPosition = position;
         }
-            
+
     }
 
 
     public void changeFragment(int position){
-    	
+
 
     		fragment_main newFragment = new fragment_main();
 			Bundle args = new Bundle();
 			args.putInt(fragments[position], position);
 			newFragment.setArguments(args);
-			
+
 			// Insert the fragment by replacing any existing fragment
 			FragmentManager fragmentManager = getFragmentManager();
 			fragmentManager.beginTransaction()
@@ -155,13 +155,13 @@ public class MainActivity extends FragmentActivity {
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
-    
+
 
 
     public static class fragment_main extends Fragment {
         public static final String ARG_POSITION = "menu_number";
 
-        
+
         public fragment_main() {
         	// Empty subclass required for fragment subclass
         }
@@ -177,7 +177,7 @@ public class MainActivity extends FragmentActivity {
         }
     }
 
-    
+
     /*
 	 * Code for converting latin letters into written morse
 	 */
@@ -226,8 +226,12 @@ public class MainActivity extends FragmentActivity {
 				After(view);
 			} else {
 				for (int c = input.length(); c > 0; c--) {
+
 					if (input.toString().startsWith(" ")) {
-						output.append("+");
+                        if(output.toString().endsWith("#")){
+                            output.delete(output.length() -1 , output.length());
+                        }
+                        output.append("+");
 						input.delete(0, 1);
 					} else if (input.toString().startsWith("A")) {
 						output.append("01#");
@@ -401,10 +405,9 @@ public class MainActivity extends FragmentActivity {
 						tfOutput = "Code not listed or wrong.";
 					}
 				}
-				if (output.toString().endsWith("#")
-						&& (output.toString().equals("#") == false)) {
-					output.delete(output.length() - 1, output.length());
-				}
+                if(output.toString().endsWith("#")){
+                    output.delete(output.length() -1 , output.length());
+                }
 				tfOutput = output.toString();
 				lastFragment = 0;
 				After(view);
@@ -631,12 +634,15 @@ public class MainActivity extends FragmentActivity {
 				tfOutput = "   ";
 				After(view);
 			} else if (input.toString().equals("WORD SPACE")) {
-				tfOutput = "         ";
+				tfOutput = "       ";
 				After(view);
 			} else {
 				for (int c = input.length(); c > 0; c--) {
 					if (input.toString().startsWith(" ")) {
-						output.append("         ");
+                        if(output.toString().endsWith("   ")){
+                            output.delete(output.length() - 3 , output.length());
+                        }
+                        output.append("       ");
 						input.delete(0, 1);
 					} else if (input.toString().startsWith("A")) {
 						output.append(".-   ");
@@ -810,10 +816,9 @@ public class MainActivity extends FragmentActivity {
 						tfOutput = "Code not listed or wrong.";
 					}
 				}
-				if (output.toString().endsWith("   ")
-						&& (output.toString().equals("   ") == false)) {
-					output.delete(output.length() - 3, output.length());
-				}
+                if(output.toString().endsWith("   ")){
+                    output.delete(output.length() - 3 , output.length());
+                }
 				tfOutput = output.toString();
 				lastFragment = 1;
 				After(view);
@@ -829,33 +834,32 @@ public class MainActivity extends FragmentActivity {
     	if (message.toString().endsWith(" ")){
     		message = message.deleteCharAt(message.length() - 1);
     	}
-			// Variables
-			String input;
-			StringBuffer output = new StringBuffer();
-			input = message.toString().toUpperCase() + "#";
-			StringBuffer inputToSign = new StringBuffer(input);
-			while (inputToSign.toString().equals("#") == false) {
-				int d = 0;
-				boolean signFull = true;
-				StringBuffer sign = new StringBuffer();
-				while (signFull) {
-					if (inputToSign.toString().charAt(d) == '+'
-							|| inputToSign.toString().charAt(d) == '#') {
-						if (d == 0) {
-							if (inputToSign.toString().startsWith("+")) {
-								output.append(" ");
-							}
-							inputToSign.deleteCharAt(0);
-						} else {
-							sign.replace(0, sign.length(), inputToSign
-									.toString().substring(0, d));
-							inputToSign.delete(0, d);
-							signFull = false;
-						}
-					} else {
-						d++;
-					}
-				}
+        String input;
+        StringBuffer output = new StringBuffer();
+        input = message.toString().toUpperCase() + "#";
+        StringBuffer inputToSign = new StringBuffer(input);
+        while (!message.toString().equals("   ")) {
+            int d = 0;
+            boolean signFull = true;
+            StringBuffer sign = new StringBuffer();
+            while (signFull) {
+                if (inputToSign.toString().startsWith("       ")) {
+                    output.append(" ");
+                    inputToSign.delete(d, d + 9);
+                } else if (inputToSign.toString().substring(d, d + 3)
+                        .equals("   ")) {
+                    if (d == 0) {
+                        inputToSign.delete(0, 3);
+                    } else {
+                        sign.replace(0, sign.length(), inputToSign
+                                .toString().substring(0, d));
+                        inputToSign.delete(0, d);
+                        signFull = false;
+                    }
+                } else {
+                    d++;
+                }
+            }
 				if (sign.toString().equals(".-")) {
 					output.append("A");
 				} else if (sign.toString().equals("-...")) {
@@ -989,7 +993,7 @@ public class MainActivity extends FragmentActivity {
 			After(view);
 	}
 	
-	
+
 	public void After(View view){
     	Intent intent = new Intent(this, DisplayMessageActivity.class);
 		intent.putExtra(EXTRA_MESSAGE, tfOutput );
