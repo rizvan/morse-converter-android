@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    This is a Android application for converting writtenMorse and normal morse code.
+    Copyright (C) 2014-2015  Marcel Michael Kapfer
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    Marcel Michael Kapfer
+    marcelmichaelkapfer@yahoo.co.nz
+
+    Version 1.0.1
+
+-->
 <resources>
 
     <string name="app_name">Morse Converter</string>
@@ -16,7 +39,7 @@
     <string name="title_section1">Version</string>
     <string name="title_section2">Developer</string>
     <string name="title_section3">Donate</string>
-    <string name="about1">About \nVersion: 1.0.0 11th December 2014 \nDeveloper: Marcel Michael Kapfer \nWebsite: marcel-kapfer.de/projects/morse/ \nContact: marcelmichaelkapfer@yahoo.co.nz \nLicense: GNU GPL v3.0
+    <string name="about1">About \nVersion: 1.0.1 5th January 2015 \nDeveloper: Marcel Michael Kapfer \nWebsite: marcel-kapfer.de/projects/morse/ \nContact: marcelmichaelkapfer@yahoo.co.nz \nLicense: GNU GPL v3.0
         \n \nBug \nIf you found a bug, please write me a mail to marcelmichaelkapfer@yahoo.co.nz with a short description of the problem. 
         \n \nHow to \nYou can find a detailed guide on marcel-kapfer.de/projects/morse/index.html#howto_android
         \n \nMissing Code \nIf you discovered, that code is missing, then write me a mail to marcelmichaelkapfer@yahoo.co.nz and tell me about it.</string>

@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    This is a Android application for converting writtenMorse and normal morse code.
+    Copyright (C) 2014-2015  Marcel Michael Kapfer
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    Marcel Michael Kapfer
+    marcelmichaelkapfer@yahoo.co.nz
+
+    Version 1.0.1
+
+-->
 <!-- German translations -->
 <resources>
     <string name="app_name">Morse Converter</string>
@@ -16,7 +39,7 @@
     <string name="title_section1">Version</string>
     <string name="title_section2">Entwickler</string>
     <string name="title_section3">Spenden</string>
-    <string name="about1">Über die App \nVersion: 1.0.0 11. Dezember 2014 \Entwickler: Marcel Michael Kapfer \nWebsite: marcel-kapfer.de/projects/morse/ \nKontakt: marcelmichaelkapfer@yahoo.co.nz \nLizens: GNU GPL v3.0
+    <string name="about1">Über die App \nVersion: 1.0.1 05. Januar 2015 \Entwickler: Marcel Michael Kapfer \nWebsite: marcel-kapfer.de/projects/morse/ \nKontakt: marcelmichaelkapfer@yahoo.co.nz \nLizens: GNU GPL v3.0
         \n \nFehler \nWenn Du einen Fehler gefunden hast, schreibe mit bitte ein Email an marcelmichaelkapfer@yahoo.co.nz mit einer kurzen Problembeschreibung.
         \n \nVerwendung \nDu kannst eine ausführliche Anwendung auf marcel-kapfer.de/projects/morse/index.html#howto_android finden.
         \n \nFehlender Code \nWenn du auf einen fehlenden Code aufmerksam geworden bist, dann schreibe eine Email an marcelmichaelkapfer@yahoo.co.nz.</string>
