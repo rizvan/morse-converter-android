@@ -32,7 +32,7 @@ public class MainActivity extends FragmentActivity {
 
 	public final static String EXTRA_MESSAGE = "de.marcelkapfer.morseconverter.MESSAGE";
 	public String tfOutput = "";
-	int lastFragment = 0;
+	public static int lastFragment = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

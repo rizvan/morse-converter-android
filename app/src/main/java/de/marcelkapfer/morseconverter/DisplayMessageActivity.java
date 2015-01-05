@@ -12,8 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+
 public class DisplayMessageActivity extends FragmentActivity {
-	
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -21,8 +21,7 @@ public class DisplayMessageActivity extends FragmentActivity {
 	    // Get the message from the intent
 	    Intent intent = getIntent();
 	    String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-	    
-	    
+
 	    // Create the text view
 	    TextView textView = new TextView(this);
 	    textView.setTextSize(20);
@@ -73,6 +72,7 @@ public class DisplayMessageActivity extends FragmentActivity {
 			return rootView;
 		}
 	}
+
 	
 	public void share(){
 		Intent intent = getIntent();
