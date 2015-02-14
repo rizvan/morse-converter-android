@@ -18,63 +18,84 @@
     Marcel Michael Kapfer
     marcelmichaelkapfer@yahoo.co.nz
 
-    Version 1.0.1
-
+    Version 1.1.0
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="vertical" >
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <LinearLayout
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="top"
+        android:layout_margin="8dp"
+        card_view:cardCornerRadius="2dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/linearLayout1" >
+        android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/edit_message"
+        <LinearLayout
+            android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/edit_message"
-            android:padding="10dp"
-            android:scrollbars="vertical" >
-        </EditText>
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:orientation="vertical"
+            >
 
-    <LinearLayout
-        style="?android:attr/buttonBarStyle"
-        android:id="@+id/linearLayout1"
-        android:layout_width="fill_parent"
-        android:layout_height="48dp"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/actionbar"
-        android:fitsSystemWindows="true"
-        android:gravity="center"
-        android:minHeight="48dp"
-        android:orientation="horizontal" >
+            <EditText
+                android:id="@+id/edit_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/edit_message"
+                android:scrollbars="vertical"
+                android:minLines="5">
+            </EditText>
 
-        <Button
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="decode"
-            android:text="@string/button_decode"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:layout_gravity="right"
+                android:height="48dp">
 
-        <Button
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="encode"
-            android:text="@string/button_encode"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginRight="8dp"
+                    android:minWidth="64dp"
+                    android:height="36dp"
+                    android:onClick="decode"
+                    android:text="@string/button_decode"
+                    android:textColor="#2196F3"
+                    android:textColorLink="#2196F3"
+                    android:gravity="center|right" />
 
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:minWidth="64dp"
+                    android:height="36dp"
+                    android:onClick="encode"
+                    android:text="@string/button_encode"
+                    android:textColor="#2196F3"
+                    android:gravity="center|right"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 </RelativeLayout>
