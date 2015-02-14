@@ -17,10 +17,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: de.marcelkapfer.morseconverter" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f42ecb6-1f27-452b-9bea-873556b497b4" name="Default" comment="Added the other sections">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/de/marcelkapfer/morseconverter/AboutFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/de/marcelkapfer/morseconverter/MorseFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/de/marcelkapfer/morseconverter/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/de/marcelkapfer/morseconverter/MainActivity.java" />
+    <list default="true" id="5f42ecb6-1f27-452b-9bea-873556b497b4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Morse Converter.iws" />
@@ -1100,6 +1097,11 @@
       <created>1423591013037</created>
       <updated>1423591013037</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added the other sections">
+      <created>1423932323566</created>
+      <updated>1423932323566</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
