@@ -45,12 +45,5 @@
         \n \nFehlender Code \nWenn du auf einen fehlenden Code aufmerksam geworden bist, dann schreibe eine Email an marcelmichaelkapfer@yahoo.co.nz.</string>
 
     <string name="about">Über</string>
-    
-        <string name="drawer_open">Navigationsmenü öffnen</string>
-    <string name="drawer_close">Navigationsmenü schließen</string>
-    <string-array name="menu_array">
-        <item>writtenMorse</item>
-        <item>Normal Morse</item>
-        <item>Über</item>
-    </string-array>
+    <string name="normalMorse">Normales Morse</string>
 </resources>

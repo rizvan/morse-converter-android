@@ -21,7 +21,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/de/marcelkapfer/morseconverter/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/de/marcelkapfer/morseconverter/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-de/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-de/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Morse Converter.iws" />
@@ -1133,7 +1132,11 @@
       <created>1423932347469</created>
       <updated>1423932347469</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Better KitKat support">
+      <created>1423935864836</created>
+      <updated>1423935864836</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1218,7 +1221,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Added the other sections" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the other sections" />
+    <MESSAGE value="Better KitKat support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Better KitKat support" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

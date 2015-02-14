@@ -42,15 +42,5 @@
         \n \nHow to \nYou can find a detailed guide on marcel-kapfer.de/projects/morse/index.html#howto_android
         \n \nMissing Code \nIf you discovered, that code is missing, then write me a mail to marcelmichaelkapfer@yahoo.co.nz and tell me about it.</string>
     <string name="about">About</string>
-    <string name="drawer_open">Open navigation drawer</string>
-    <string name="drawer_close">Close navigation drawer</string>
-
-    <string-array name="menu_array">
-        <item>writtenMorse</item>
-        <item>Normal Morse</item>
-        <item>About</item>
-    </string-array>
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="normalMorse">Normal Morse</string>
 </resources>
