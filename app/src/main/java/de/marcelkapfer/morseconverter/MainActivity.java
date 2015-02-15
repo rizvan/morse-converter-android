@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import it.neokree.materialnavigationdrawer.elements.MaterialSection;
@@ -36,19 +39,43 @@ public class MainActivity extends MaterialNavigationDrawer {
     }
 
     public void normalMorseEncode(View view){
-
+        EditText text = (EditText) findViewById(R.id.editTextNormalMorse);
+        TextView test = (TextView) findViewById(R.id.outputNormalMorse);
+        CardView cardView = (CardView) findViewById(R.id.cardViewNormalMorseOutput);
+        if(cardView.getVisibility() == View.INVISIBLE){
+            cardView.setVisibility(View.VISIBLE);
+        }
+        test.setText(text.getText());
     }
 
     public void normalMorseDecode(View view){
-
+        EditText text = (EditText) findViewById(R.id.editTextNormalMorse);
+        TextView test = (TextView) findViewById(R.id.outputNormalMorse);
+        CardView cardView = (CardView) findViewById(R.id.cardViewNormalMorseOutput);
+        if(cardView.getVisibility() == View.INVISIBLE){
+            cardView.setVisibility(View.VISIBLE);
+        }
+        test.setText(text.getText());
     }
 
     public void writtenMorseEncode(View view){
-
+        EditText text = (EditText) findViewById(R.id.editTextWrittenMorse);
+        TextView test = (TextView) findViewById(R.id.outputWrittenMorse);
+        CardView cardView = (CardView) findViewById(R.id.cardViewWrittenMorseOutput);
+        if(cardView.getVisibility() == View.INVISIBLE){
+            cardView.setVisibility(View.VISIBLE);
+        }
+        test.setText(text.getText());
     }
 
     public void writtenMorseDecode(View view){
-
+        EditText text = (EditText) findViewById(R.id.editTextWrittenMorse);
+        TextView test = (TextView) findViewById(R.id.outputWrittenMorse);
+        CardView cardView = (CardView) findViewById(R.id.cardViewWrittenMorseOutput);
+        if(cardView.getVisibility() == View.INVISIBLE){
+            cardView.setVisibility(View.VISIBLE);
+        }
+        test.setText(text.getText());
     }
 
     //called when clicking on the version entry in the about fragment

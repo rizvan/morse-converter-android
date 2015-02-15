@@ -54,4 +54,7 @@
     <!--Drawer Titles-->
     <string name="about">About</string>
     <string name="normalMorse">Normal Morse</string>
+    <!--Output Text Buttons-->
+    <string name="button_share">SHARE</string>
+    <string name="button_copy">COPY</string>
 </resources>

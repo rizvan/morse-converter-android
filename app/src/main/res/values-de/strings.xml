@@ -47,4 +47,7 @@
     <string name="sectionHow">Anleitung</string>
     <string name="sectionLicense">Lizens</string>
     <string name="sectionMissing">Fehlender Code</string>
+    <!--Output Text Buttons-->
+    <string name="button_share">TEILEN</string>
+    <string name="button_copy">KOPIEREN</string>
 </resources>
