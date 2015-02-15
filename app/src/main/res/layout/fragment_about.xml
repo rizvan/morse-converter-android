@@ -37,7 +37,8 @@
             style="@style/LinearLayoutListContainer">
 
             <LinearLayout
-                style="@style/LinearLayoutList">
+                style="@style/LinearLayoutList"
+                android:onClick="versionEntry">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -56,7 +57,7 @@
 
             <LinearLayout
                 style="@style/LinearLayoutList"
-                android:onClick="developerProfile">
+                android:onClick="developerEntry">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -73,7 +74,8 @@
             </LinearLayout>
 
             <LinearLayout
-                style="@style/LinearLayoutList">
+                style="@style/LinearLayoutList"
+                android:onClick="websiteEntry">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -90,7 +92,8 @@
             </LinearLayout>
 
             <LinearLayout
-                style="@style/LinearLayoutList">
+                style="@style/LinearLayoutList"
+                android:onClick="contactEntry">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -107,7 +110,8 @@
             </LinearLayout>
 
             <LinearLayout
-                style="@style/LinearLayoutList">
+                style="@style/LinearLayoutList"
+                android:onClick="licenseEntry">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -124,7 +128,8 @@
             </LinearLayout>
 
             <LinearLayout
-                style="@style/LinearLayoutList">
+                style="@style/LinearLayoutList"
+                android:onClick="bugEntry">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -142,7 +147,8 @@
             </LinearLayout>
 
             <LinearLayout
-                style="@style/LinearLayoutList">
+                style="@style/LinearLayoutList"
+                android:onClick="howtoEntry">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -160,7 +166,8 @@
             </LinearLayout>
 
             <LinearLayout
-                style="@style/LinearLayoutList">
+                style="@style/LinearLayoutList"
+                android:onClick="missingCodeEntry">
 
                 <TextView
                     android:layout_width="match_parent"
