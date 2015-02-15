@@ -69,7 +69,8 @@
                 android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:layout_gravity="right"
-                android:height="48dp">
+                android:height="48dp"
+                android:baselineAligned="false">
 
                 <Button
                     android:layout_width="wrap_content"
@@ -79,9 +80,10 @@
                     android:height="36dp"
                     android:onClick="decode"
                     android:text="@string/button_decode"
+                    android:background="@color/cardview_light_background"
                     android:textColor="#2196F3"
-                    android:textColorLink="#2196F3"
-                    android:gravity="center|right" />
+                    android:gravity="center|right"
+                    style="?android:attr/borderlessButtonStyle" />
 
                 <Button
                     android:layout_width="wrap_content"
@@ -91,7 +93,9 @@
                     android:onClick="encode"
                     android:text="@string/button_encode"
                     android:textColor="#2196F3"
-                    android:gravity="center|right"/>
+                    android:gravity="center|right"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:background="@color/cardview_light_background" />
             </LinearLayout>
 
 

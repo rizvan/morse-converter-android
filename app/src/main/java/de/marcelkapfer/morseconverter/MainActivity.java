@@ -1,6 +1,8 @@
 package de.marcelkapfer.morseconverter;
 
+import android.content.Intent;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import it.neokree.materialnavigationdrawer.elements.MaterialSection;
@@ -24,4 +26,11 @@ public class MainActivity extends MaterialNavigationDrawer {
         allowArrowAnimation();
         this.disableLearningPattern();
     }
+
+    public void developerProfile(){
+        Intent gplusProfile = new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/+MarcelMichaelKapfer/posts"));
+        startActivity(gplusProfile);
+    }
+
+
 }
