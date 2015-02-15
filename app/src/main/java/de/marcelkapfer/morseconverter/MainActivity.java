@@ -35,6 +35,22 @@ public class MainActivity extends MaterialNavigationDrawer {
         this.disableLearningPattern(); //Doesn't open the drawer always when the app starts
     }
 
+    public void normalMorseEncode(View view){
+
+    }
+
+    public void normalMorseDecode(View view){
+
+    }
+
+    public void writtenMorseEncode(View view){
+
+    }
+
+    public void writtenMorseDecode(View view){
+
+    }
+
     //called when clicking on the version entry in the about fragment
     //opens the app page (de.marcelkapfer.morseconverter)
     public void versionEntry(View view){

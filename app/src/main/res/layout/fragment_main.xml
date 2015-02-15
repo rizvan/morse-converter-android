@@ -72,30 +72,16 @@
                 android:height="48dp"
                 android:baselineAligned="false">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_marginRight="8dp"
-                    android:minWidth="64dp"
-                    android:height="36dp"
-                    android:onClick="decode"
-                    android:text="@string/button_decode"
-                    android:background="@color/cardview_light_background"
-                    android:textColor="#2196F3"
-                    android:gravity="center|right"
-                    style="?android:attr/borderlessButtonStyle" />
+                <TextView
+                    style="@style/TextViewButton"
+                    android:layout_marginRight="6dp"
+                    android:onClick="writtenMorseDecode"
+                    android:text="@string/button_decode" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:minWidth="64dp"
-                    android:height="36dp"
-                    android:onClick="encode"
-                    android:text="@string/button_encode"
-                    android:textColor="#2196F3"
-                    android:gravity="center|right"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:background="@color/cardview_light_background" />
+                <TextView
+                    style="@style/TextViewButton"
+                    android:onClick="writtenMorseEncode"
+                    android:text="@string/button_encode" />
             </LinearLayout>
 
 

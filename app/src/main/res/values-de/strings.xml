@@ -27,8 +27,8 @@
     <string name="app_name">Morse Converter</string>
     <string name="action_settings">Einstellungen</string>
     <string name="edit_message">Geben Sie einen Text ein</string>
-    <string name="button_decode">Verschlüsseln</string>
-    <string name="button_encode">Entschlüsseln</string>
+    <string name="button_decode">VERSCHLÜSSELN</string>
+    <string name="button_encode">ENTSCHLÜSSELN</string>
     <string name="title_activity_display_message">Ihr Text</string>
     <string name="hello_world">Hallo Welt</string>
     <string name="action_search">Suche</string>
