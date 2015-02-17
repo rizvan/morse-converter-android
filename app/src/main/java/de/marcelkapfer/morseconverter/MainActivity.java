@@ -35,7 +35,6 @@ public class MainActivity extends MaterialNavigationDrawer {
         this.addDivisor();
         this.addSection(about);
         //set drawer image
-        //TODO create 16:9 image
         this.setDrawerHeaderImage(this.getResources().getDrawable(R.drawable.feature_graphics));
         allowArrowAnimation(); //Drawer Arrow rotations
         this.disableLearningPattern(); //Doesn't open the drawer always when the app starts
