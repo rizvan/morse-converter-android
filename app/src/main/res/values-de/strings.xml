@@ -19,8 +19,6 @@
     Marcel Michael Kapfer
     marcelmichaelkapfer@yahoo.co.nz
 
-    Version 1.0.1
-
 -->
 <!-- German translations -->
 <resources>
@@ -40,7 +38,7 @@
     <string name="aboutBug">Wenn Du einen Fehler gefunden hast, schreibe mit bitte ein Email an marcelmichaelkapfer@yahoo.co.nz</string>
     <string name="aboutHow">Du kannst eine ausführliche Anwendung auf marcel-kapfer.de/projects/morse/index.html#howto_android finden.</string>
     <string name="aboutMissing">Wenn du auf einen fehlenden Code aufmerksam geworden bist, dann schreibe eine Email an marcelmichaelkapfer@yahoo.co.nz.</string>
-    <string name="aboutVersion">2.0 alpha \n14th February 2015</string>
+    <string name="aboutVersion">2.0 beta \n17th February 2015</string>
     <string name="sectionBug">Fehler</string>
     <string name="sectionContact">Kontakt</string>
     <string name="sectionDeveloper">Entwickler</string>

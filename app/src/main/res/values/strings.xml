@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
+
     This is a Android application for converting writtenMorse and normal morse code.
     Copyright (C) 2014-2015  Marcel Michael Kapfer
 
@@ -18,7 +19,6 @@
     Marcel Michael Kapfer
     marcelmichaelkapfer@yahoo.co.nz
 
-    Version 1.0.1
 -->
 <resources>
 
@@ -43,7 +43,7 @@
     <string name="sectionHow">How to</string>
     <string name="sectionMissing">Missing Code</string>
     <!--About Texts-->
-    <string name="aboutVersion">2.0 alpha \n14th February 2015</string>
+    <string name="aboutVersion">2.0 beta \n17th February 2015</string>
     <string name="aboutDeveloper" translatable="false">Marcel Michael Kapfer</string>
     <string name="aboutWebsite" translatable="false">marcel-kapfer.de/projects/morse/</string>
     <string name="aboutContact" translatable="false">marcelmichaelkapfer@yahoo.co.nz</string>
