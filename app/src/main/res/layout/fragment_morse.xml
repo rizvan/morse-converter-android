@@ -88,16 +88,26 @@
                 android:layout_gravity="right"
                 android:baselineAligned="false">
 
-                <TextView
-                    style="@style/TextViewButton"
+                <LinearLayout
+                    style="@style/LinearLayoutButton"
                     android:onClick="normalMorseDecode"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/button_decode" />
+                    android:layout_marginRight="8dp">
 
-                <TextView
-                    style="@style/TextViewButton"
-                    android:onClick="normalMorseEncode"
-                    android:text="@string/button_encode" />
+                    <TextView
+                        style="@style/LinearLayoutButtonText"
+                        android:text="@string/button_decode"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/LinearLayoutButton"
+                    android:onClick="normalMorseEncode">
+
+                    <TextView
+                        style="@style/LinearLayoutButtonText"
+                        android:text="@string/button_encode" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -130,6 +140,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
+                android:minHeight="64dp"
+                android:gravity="center_vertical"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
@@ -154,16 +166,27 @@
                 android:layout_gravity="right"
                 android:baselineAligned="false">
 
-                <TextView
-                    style="@style/TextViewButton"
+                <LinearLayout
+                    style="@style/LinearLayoutButton"
                     android:layout_marginRight="8dp"
-                    android:onClick="writtenMorseDecode"
-                    android:text="@string/button_copy" />
+                    android:onClick="copyNormalMorse" >
 
-                <TextView
-                    style="@style/TextViewButton"
-                    android:onClick="writtenMorseEncode"
-                    android:text="@string/button_share" />
+                    <TextView
+                        style="@style/LinearLayoutButtonText"
+                        android:text="@string/button_copy" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/LinearLayoutButton"
+                    android:onClick="shareNormalMorse" >
+
+                    <TextView
+                        style="@style/LinearLayoutButtonText"
+                        android:text="@string/button_share"/>
+
+                </LinearLayout>
+
             </LinearLayout>
 
 

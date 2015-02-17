@@ -1,5 +1,8 @@
 package de.marcelkapfer.morseconverter;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
@@ -39,43 +42,63 @@ public class MainActivity extends MaterialNavigationDrawer {
     }
 
     public void normalMorseEncode(View view){
-        EditText text = (EditText) findViewById(R.id.editTextNormalMorse);
-        TextView test = (TextView) findViewById(R.id.outputNormalMorse);
-        CardView cardView = (CardView) findViewById(R.id.cardViewNormalMorseOutput);
-        if(cardView.getVisibility() == View.INVISIBLE){
-            cardView.setVisibility(View.VISIBLE);
+        try{
+            EditText input = (EditText) findViewById(R.id.editTextNormalMorse);
+            TextView output = (TextView) findViewById(R.id.outputNormalMorse);
+            CardView cardView = (CardView) findViewById(R.id.cardViewNormalMorseOutput);
+            if(cardView.getVisibility() == View.INVISIBLE){
+                cardView.setVisibility(View.VISIBLE);
+            }
+            EncodeNormalMorseManager message = new EncodeNormalMorseManager(input.getText().toString());
+            output.setText(message.getEncodedString());
+        } catch (Exception e){
+            e.printStackTrace();
         }
-        test.setText(text.getText());
     }
 
     public void normalMorseDecode(View view){
-        EditText text = (EditText) findViewById(R.id.editTextNormalMorse);
-        TextView test = (TextView) findViewById(R.id.outputNormalMorse);
-        CardView cardView = (CardView) findViewById(R.id.cardViewNormalMorseOutput);
-        if(cardView.getVisibility() == View.INVISIBLE){
-            cardView.setVisibility(View.VISIBLE);
+        try {
+            EditText input = (EditText) findViewById(R.id.editTextNormalMorse);
+            TextView output = (TextView) findViewById(R.id.outputNormalMorse);
+            CardView cardView = (CardView) findViewById(R.id.cardViewNormalMorseOutput);
+            if(cardView.getVisibility() == View.INVISIBLE){
+                cardView.setVisibility(View.VISIBLE);
+            }
+            DecodeNormalMorseManager message = new DecodeNormalMorseManager(input.getText().toString());
+            output.setText(message.getDecodedString());
+        } catch (Exception e){
+            e.printStackTrace();
         }
-        test.setText(text.getText());
     }
 
     public void writtenMorseEncode(View view){
-        EditText text = (EditText) findViewById(R.id.editTextWrittenMorse);
-        TextView test = (TextView) findViewById(R.id.outputWrittenMorse);
-        CardView cardView = (CardView) findViewById(R.id.cardViewWrittenMorseOutput);
-        if(cardView.getVisibility() == View.INVISIBLE){
-            cardView.setVisibility(View.VISIBLE);
+        try {
+            EditText input = (EditText) findViewById(R.id.editTextWrittenMorse);
+            TextView output = (TextView) findViewById(R.id.outputWrittenMorse);
+            CardView cardView = (CardView) findViewById(R.id.cardViewWrittenMorseOutput);
+            if(cardView.getVisibility() == View.INVISIBLE){
+                cardView.setVisibility(View.VISIBLE);
+            }
+            EncodeWrittenMorseManager message = new EncodeWrittenMorseManager(input.getText().toString());
+            output.setText(message.getEncodedString());
+        } catch (Exception e){
+            e.printStackTrace();
         }
-        test.setText(text.getText());
     }
 
     public void writtenMorseDecode(View view){
-        EditText text = (EditText) findViewById(R.id.editTextWrittenMorse);
-        TextView test = (TextView) findViewById(R.id.outputWrittenMorse);
-        CardView cardView = (CardView) findViewById(R.id.cardViewWrittenMorseOutput);
-        if(cardView.getVisibility() == View.INVISIBLE){
-            cardView.setVisibility(View.VISIBLE);
+        try {
+            EditText input = (EditText) findViewById(R.id.editTextWrittenMorse);
+            TextView output = (TextView) findViewById(R.id.outputWrittenMorse);
+            CardView cardView = (CardView) findViewById(R.id.cardViewWrittenMorseOutput);
+            if(cardView.getVisibility() == View.INVISIBLE){
+                cardView.setVisibility(View.VISIBLE);
+            }
+            DecodeWrittenMorseManager message = new DecodeWrittenMorseManager(input.getText().toString());
+            output.setText(message.getDecodedString());
+        } catch (Exception e){
+            e.printStackTrace();
         }
-        test.setText(text.getText());
     }
 
     //called when clicking on the version entry in the about fragment
@@ -164,5 +187,41 @@ public class MainActivity extends MaterialNavigationDrawer {
         } catch(Exception e){
             e.printStackTrace();
         }
+    }
+
+    public void shareWrittenMorse(View view){
+        TextView message = (TextView) findViewById(R.id.outputWrittenMorse);
+        share(message.getText().toString());
+    }
+
+    public void shareNormalMorse(View view){
+        TextView message = (TextView) findViewById(R.id.outputNormalMorse);
+        share(message.getText().toString());
+    }
+
+    public void share(String string){
+		Intent intent = getIntent();
+	    String message = intent.getStringExtra(string);
+		Intent sendIntent = new Intent();
+		sendIntent.setAction(Intent.ACTION_SEND);
+		sendIntent.putExtra(Intent.EXTRA_TEXT, message);
+		sendIntent.setType("text/plain");
+		startActivity(Intent.createChooser(sendIntent, getResources().getText(R.string.send_to)));
+	}
+
+    public void copyWrittenMorse(View view){
+        TextView message = (TextView) findViewById(R.id.outputWrittenMorse);
+        copy(message.getText().toString());
+    }
+
+    public void copyNormalMorse(View view){
+        TextView message = (TextView) findViewById(R.id.outputNormalMorse);
+        copy(message.getText().toString());
+    }
+
+    public void copy(String string){
+        ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText("Message", string);
+        clipboard.setPrimaryClip(clip);
     }
 }
