@@ -169,7 +169,7 @@
                 <LinearLayout
                     style="@style/LinearLayoutButton"
                     android:layout_marginRight="8dp"
-                    android:onClick="copyNormalMorse" >
+                    android:onClick="copyWrittenMorse" >
 
                     <TextView
                         style="@style/LinearLayoutButtonText"
@@ -179,7 +179,7 @@
 
                 <LinearLayout
                     style="@style/LinearLayoutButton"
-                    android:onClick="shareNormalMorse" >
+                    android:onClick="shareWrittenMorse" >
 
                     <TextView
                         style="@style/LinearLayoutButtonText"
