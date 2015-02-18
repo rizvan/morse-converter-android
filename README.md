@@ -1,6 +1,5 @@
 # Material Design
 
-<<<<<<< HEAD
 A writtenMorse and normal morse code converter for Android. You can find more information about this app on http://marcel-kapfer.de/projects/morse/.
 
 ## Contribute
@@ -16,15 +15,12 @@ You can also check out the issues and the Trello board.
 ## Trello Board
 
 [Feature & Development Board](https://trello.com/b/SGMIGVbI/morse-android)
-=======
-This is the branch where the material design is created
-
-## Progress
-
-At the moment the whole app is ready to publish but I will waite a few hours and search for bugs.
 
 ## Design
 
-This is how it will look like:
+This is how it looks:
 ![Image](http://marcel-kapfer.de/res/blog/20150218/with-background.png)
->>>>>>> material
+
+## Used Libraries
+
+[Neokree's Material Navigation Drawer](https://github.com/neokree/MaterialNavigationDrawer)
