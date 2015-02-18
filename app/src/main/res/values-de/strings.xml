@@ -19,38 +19,33 @@
     Marcel Michael Kapfer
     marcelmichaelkapfer@yahoo.co.nz
 
-    Version 1.0.1
-
 -->
 <!-- German translations -->
 <resources>
     <string name="app_name">Morse Converter</string>
     <string name="action_settings">Einstellungen</string>
     <string name="edit_message">Geben Sie einen Text ein</string>
-    <string name="button_decode">Verschlüsseln</string>
-    <string name="button_encode">Entschlüsseln</string>
+    <string name="button_decode">VERSCHLÜSSELN</string>
+    <string name="button_encode">ENTSCHLÜSSELN</string>
     <string name="title_activity_display_message">Ihr Text</string>
     <string name="hello_world">Hallo Welt</string>
     <string name="action_search">Suche</string>
     <string name="output_message">Ihr Text</string>
     <string name="share">Teilen</string>
     <string name="send_to">Teilen Sie Ihren Text:</string>
-    <string name="title_activity_about">Über</string>
-    <string name="title_section1">Version</string>
-    <string name="title_section2">Entwickler</string>
-    <string name="title_section3">Spenden</string>
-    <string name="about1">Über die App \nVersion: 1.0.1 05. Januar 2015 \Entwickler: Marcel Michael Kapfer \nWebsite: marcel-kapfer.de/projects/morse/ \nKontakt: marcelmichaelkapfer@yahoo.co.nz \nLizens: GNU GPL v3.0
-        \n \nFehler \nWenn Du einen Fehler gefunden hast, schreibe mit bitte ein Email an marcelmichaelkapfer@yahoo.co.nz mit einer kurzen Problembeschreibung.
-        \n \nVerwendung \nDu kannst eine ausführliche Anwendung auf marcel-kapfer.de/projects/morse/index.html#howto_android finden.
-        \n \nFehlender Code \nWenn du auf einen fehlenden Code aufmerksam geworden bist, dann schreibe eine Email an marcelmichaelkapfer@yahoo.co.nz.</string>
-
     <string name="about">Über</string>
-    
-        <string name="drawer_open">Navigationsmenü öffnen</string>
-    <string name="drawer_close">Navigationsmenü schließen</string>
-    <string-array name="menu_array">
-        <item>writtenMorse</item>
-        <item>Normal Morse</item>
-        <item>Über</item>
-    </string-array>
+    <string name="normalMorse">Normales Morse</string>
+    <string name="aboutBug">Wenn Du einen Fehler gefunden hast, schreibe mit bitte ein Email an marcelmichaelkapfer@yahoo.co.nz</string>
+    <string name="aboutHow">Du kannst eine ausführliche Anwendung auf marcel-kapfer.de/projects/morse/index.html#howto_android finden.</string>
+    <string name="aboutMissing">Wenn du auf einen fehlenden Code aufmerksam geworden bist, dann schreibe eine Email an marcelmichaelkapfer@yahoo.co.nz.</string>
+    <string name="aboutVersion">2.0 \n18th February 2015</string>
+    <string name="sectionBug">Fehler</string>
+    <string name="sectionContact">Kontakt</string>
+    <string name="sectionDeveloper">Entwickler</string>
+    <string name="sectionHow">Anleitung</string>
+    <string name="sectionLicense">Lizens</string>
+    <string name="sectionMissing">Fehlender Code</string>
+    <!--Output Text Buttons-->
+    <string name="button_share">TEILEN</string>
+    <string name="button_copy">KOPIEREN</string>
 </resources>

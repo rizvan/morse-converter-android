@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+package de.marcelkapfer.morseconverter;
 
+/*
     This is a Android application for converting writtenMorse and normal morse code.
     Copyright (C) 2014-2015  Marcel Michael Kapfer
 
@@ -19,10 +19,20 @@
     Marcel Michael Kapfer
     marcelmichaelkapfer@yahoo.co.nz
 
--->
-<resources>
-    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
-         (such as screen margins) for screens with more than 820dp of available width. This
-         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
-    <dimen name="activity_horizontal_margin">64dp</dimen>
-</resources>
+ */
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+/**
+ * Created by mmk on 2/14/15.
+ */
+public class AboutFragment extends Fragment{
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        return inflater.inflate(R.layout.fragment_about, container, false);
+    }
+}

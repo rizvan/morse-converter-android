@@ -19,38 +19,42 @@
     Marcel Michael Kapfer
     marcelmichaelkapfer@yahoo.co.nz
 
-    Version 1.0.1
-
 -->
 <resources>
 
     <string name="app_name">Morse Converter</string>
     <string name="action_settings">Settings</string>
     <string name="edit_message">Enter a Message</string>
-    <string name="button_decode">Encrypt</string>
-    <string name="button_encode">Decrypt</string>
+    <string name="button_decode">ENCRYPT</string>
+    <string name="button_encode">DECRYPT</string>
     <string name="title_activity_display_message">Your Message</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_search">Search</string>
     <string name="output_message">Your Message</string>
     <string name="share">Share</string>
     <string name="send_to">Share your text:</string>
-    <string name="title_activity_about">About Activity</string>
-    <string name="title_section1">Version</string>
-    <string name="title_section2">Developer</string>
-    <string name="title_section3">Donate</string>
-    <string name="about1">About \nVersion: 1.0.1 5th January 2015 \nDeveloper: Marcel Michael Kapfer \nWebsite: marcel-kapfer.de/projects/morse/ \nContact: marcelmichaelkapfer@yahoo.co.nz \nLicense: GNU GPL v3.0
-        \n \nBug \nIf you found a bug, please write me a mail to marcelmichaelkapfer@yahoo.co.nz with a short description of the problem. 
-        \n \nHow to \nYou can find a detailed guide on marcel-kapfer.de/projects/morse/index.html#howto_android
-        \n \nMissing Code \nIf you discovered, that code is missing, then write me a mail to marcelmichaelkapfer@yahoo.co.nz and tell me about it.</string>
+    <!--About Section Names-->
+    <string name="sectionVersion" translatable="false">Version</string>
+    <string name="sectionDeveloper">Developer</string>
+    <string name="sectionWebsite" translatable="false">Website</string>
+    <string name="sectionContact">Contact</string>
+    <string name="sectionLicense">License</string>
+    <string name="sectionBug">Bug</string>
+    <string name="sectionHow">How to</string>
+    <string name="sectionMissing">Missing Code</string>
+    <!--About Texts-->
+    <string name="aboutVersion">2.0 \n18th February 2015</string>
+    <string name="aboutDeveloper" translatable="false">Marcel Michael Kapfer</string>
+    <string name="aboutWebsite" translatable="false">marcel-kapfer.de/projects/morse/</string>
+    <string name="aboutContact" translatable="false">marcelmichaelkapfer@yahoo.co.nz</string>
+    <string name="aboutLicense" translatable="false">GNU GPL v3.0</string>
+    <string name="aboutBug">If you found a bug, please write me a mail to marcelmichaelkapfer@yahoo.co.nz with a short description of the problem.</string>
+    <string name="aboutHow">You can find a detailed guide on marcel-kapfer.de/projects/morse/index.html#howto_android</string>
+    <string name="aboutMissing">If you discovered, that code is missing, then write me a mail to marcelmichaelkapfer@yahoo.co.nz and tell me about it.</string>
+    <!--Drawer Titles-->
     <string name="about">About</string>
-    
-    <string name="drawer_open">Open navigation drawer</string>
-    <string name="drawer_close">Close navigation drawer</string>
-    <string-array name="menu_array">
-        <item>writtenMorse</item>
-        <item>Normal Morse</item>
-        <item>About</item>
-    </string-array>
-
+    <string name="normalMorse">Normal Morse</string>
+    <!--Output Text Buttons-->
+    <string name="button_share">SHARE</string>
+    <string name="button_copy">COPY</string>
 </resources>
