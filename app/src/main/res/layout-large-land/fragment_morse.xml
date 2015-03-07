@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    This is a Android application for converting writtenMorse and normal morse code.
+    Copyright (C) 2014-2015  Marcel Michael Kapfer
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    Marcel Michael Kapfer
+    marcelmichaelkapfer@yahoo.co.nz
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:animateLayoutChanges="true"
+    android:scrollbars="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView3">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="top"
+        android:layout_margin="8dp"
+        card_view:cardCornerRadius="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:id="@+id/editTextNormalMorse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:ems="10"
+                android:hint="@string/edit_message"
+                android:background="@color/cardview_light_background"
+                android:minLines="5"
+                android:textCursorDrawable="@color/colorPrimary">
+            </EditText>
+
+            <View
+                style="@style/Divider" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="right"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    style="@style/LinearLayoutButton"
+                    android:onClick="normalMorseDecode"
+                    android:layout_marginRight="8dp">
+
+                    <TextView
+                        style="@style/LinearLayoutButtonText"
+                        android:text="@string/button_decode"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/LinearLayoutButton"
+                    android:onClick="normalMorseEncode">
+
+                    <TextView
+                        style="@style/LinearLayoutButtonText"
+                        android:text="@string/button_encode" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardViewNormalMorseOutput"
+        android:layout_margin="8dp"
+        card_view:cardCornerRadius="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/outputNormalMorse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:minHeight="64dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/output_message"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:background="@color/cardview_light_background"/>
+
+            <View
+                style="@style/Divider"
+                />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="right"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    style="@style/LinearLayoutButton"
+                    android:layout_marginRight="8dp"
+                    android:onClick="copyNormalMorse" >
+
+                    <TextView
+                        style="@style/LinearLayoutButtonText"
+                        android:text="@string/button_copy" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/LinearLayoutButton"
+                    android:onClick="shareNormalMorse" >
+
+                    <TextView
+                        style="@style/LinearLayoutButtonText"
+                        android:text="@string/button_share"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
