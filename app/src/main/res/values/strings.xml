@@ -43,7 +43,7 @@
     <string name="sectionHow">How to</string>
     <string name="sectionMissing">Missing Code</string>
     <!--About Texts-->
-    <string name="aboutVersion">2.0 \n18th February 2015</string>
+    <string name="aboutVersion">2.1\n10th March 2015</string>
     <string name="aboutDeveloper" translatable="false">Marcel Michael Kapfer</string>
     <string name="aboutWebsite" translatable="false">marcel-kapfer.de/projects/morse/</string>
     <string name="aboutContact" translatable="false">marcelmichaelkapfer@yahoo.co.nz</string>
