@@ -5,7 +5,7 @@ A writtenMorse and normal morse code converter for Android. You can find more in
 ## Design
 
 This is how it looks:
-![Image](http://marcel-kapfer.de/res/blog/20150218/with-background.png)
+![Image](http://marcel-kapfer.de/writtenmorse/presentation-graphic.png)
 
 ## Contribute
 
