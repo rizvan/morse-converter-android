@@ -30,3 +30,4 @@ proguard/
 
 # IntelliJ IDEA Files
 *.iml
+app/app.iml

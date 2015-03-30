@@ -40,7 +40,7 @@ import it.neokree.materialnavigationdrawer.elements.MaterialSection;
 public class MainActivity extends MaterialNavigationDrawer {
 
     //Declaring the Material Sections
-    private MaterialSection writtenMorse, normalMorse, about;
+    private MaterialSection writtenMorse, normalMorse, writtenMorseList, about;
 
     //The MaterialNavigationDrawer init() methode replaces the normal  onCreate() methode
     @Override
@@ -49,10 +49,13 @@ public class MainActivity extends MaterialNavigationDrawer {
         //Declaring the Material Sections
         writtenMorse = this.newSection("writtenMorse", new MainFragment());
         normalMorse = this.newSection(res.getString(R.string.normalMorse), new MorseFragment());
+        writtenMorseList = this.newSection("writtenMorse Codes", new writtenMorseListFragment()); //TODO rename
         about = this.newSection(res.getString(R.string.about), new AboutFragment());
         //Adding the Sections
         this.addSection(writtenMorse);
         this.addSection(normalMorse);
+        this.addDivisor();
+        this.addSection(writtenMorseList);
         this.addDivisor();
         this.addSection(about);
         //set drawer image
