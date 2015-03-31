@@ -56,12 +56,12 @@ public class MainActivity extends MaterialNavigationDrawer {
         this.addSection(normalMorse);
         this.addDivisor();
         this.addSection(writtenMorseList);
-        this.addDivisor();
-        this.addSection(about);
+        this.addBottomSection(about);
         //set drawer image
         this.setDrawerHeaderImage(this.getResources().getDrawable(R.drawable.feature_graphics));
         allowArrowAnimation(); //Drawer Arrow rotations
         this.disableLearningPattern(); //Doesn't open the drawer always when the app starts
+        setBackPattern(MaterialNavigationDrawer.BACKPATTERN_BACK_TO_FIRST);
     }
 
     public void normalMorseEncode(View view){
