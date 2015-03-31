@@ -30,6 +30,7 @@
         <item name="colorAccent">@color/white</item>
         <item name="drawerType">@integer/DRAWERTYPE_IMAGE</item>
         <item name="rippleBackport">true</item>
+        <item name="toolbarElevation">true</item>
     </style>
 
     <style name="LinearLayoutList">
