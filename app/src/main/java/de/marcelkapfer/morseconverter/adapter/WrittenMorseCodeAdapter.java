@@ -1,4 +1,4 @@
-package de.marcelkapfer.morseconverter;
+package de.marcelkapfer.morseconverter.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,10 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import de.marcelkapfer.morseconverter.R;
+
 /**
  * Created by mmk on 3/30/15.
  */
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+public class WrittenMorseCodeAdapter extends RecyclerView.Adapter<WrittenMorseCodeAdapter.ViewHolder> {
     private String[] mLetter;
     private String[] mCode;
     private static String mType = "LETTER";
@@ -26,13 +28,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     }
 
-    public MyAdapter(String[] myLetter, String[] myCode) {
+    public WrittenMorseCodeAdapter(String[] myLetter, String[] myCode) {
         mLetter = myLetter;
         mCode = myCode;
     }
 
     @Override
-    public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+    public WrittenMorseCodeAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                    int viewType) {
         // create a new view
         View v = LayoutInflater.from(parent.getContext())

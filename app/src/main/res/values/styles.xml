@@ -27,7 +27,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/white</item>
+        <item name="colorAccent">@color/colorPrimary</item>
         <item name="drawerType">@integer/DRAWERTYPE_IMAGE</item>
         <item name="rippleBackport">true</item>
         <item name="toolbarElevation">true</item>

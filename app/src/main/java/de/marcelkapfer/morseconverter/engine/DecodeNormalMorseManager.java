@@ -1,4 +1,4 @@
-package de.marcelkapfer.morseconverter;
+package de.marcelkapfer.morseconverter.engine;
 
 /*
     This is a Android application for converting writtenMorse and normal morse code.
@@ -23,30 +23,11 @@ package de.marcelkapfer.morseconverter;
 
 public class DecodeNormalMorseManager {
 
-    private String inputMessage;
-
-    DecodeNormalMorseManager(String string) {
-        inputMessage = string;
-    }
-
-    public void setString(String string) {
-        inputMessage = string;
-    }
-
-    public String getString() {
-        return inputMessage;
-    }
-
-    /*
-     * Code for converting normal letters into morse code
-	 */
-
-    public String getDecodedString() {
+    public static String getDecodedString(String inputMessage) {
         StringBuffer message = new StringBuffer(inputMessage);
         if (message.toString().endsWith(" ")) {
             message = message.deleteCharAt(message.length() - 1);
         }
-        // Variables
         // Variables
         StringBuffer input = new StringBuffer();
         input = input.replace(0, input.length(), message.toString().toUpperCase());

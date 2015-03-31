@@ -21,7 +21,6 @@ package de.marcelkapfer.morseconverter;
 
  */
 
-import android.app.Notification;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -29,19 +28,24 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import de.marcelkapfer.morseconverter.engine.DecodeNormalMorseManager;
+import de.marcelkapfer.morseconverter.engine.DecodeWrittenMorseManager;
+import de.marcelkapfer.morseconverter.engine.EncodeNormalMorseManager;
+import de.marcelkapfer.morseconverter.engine.EncodeWrittenMorseManager;
+import de.marcelkapfer.morseconverter.fragments.AboutFragment;
+import de.marcelkapfer.morseconverter.fragments.MainFragment;
+import de.marcelkapfer.morseconverter.fragments.MorseFragment;
+import de.marcelkapfer.morseconverter.fragments.writtenMorseListFragment;
+
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import it.neokree.materialnavigationdrawer.elements.MaterialSection;
 import it.neokree.materialnavigationdrawer.util.MaterialActionBarDrawerToggle;
-
-import static android.view.inputmethod.InputMethodManager.*;
 
 
 public class MainActivity extends MaterialNavigationDrawer {
@@ -79,6 +83,7 @@ public class MainActivity extends MaterialNavigationDrawer {
 
             public void onDrawerOpened(View view){
                 super.onDrawerOpened(view);
+                // This closes the soft keyboard, when the drawer is opened
                 try {
                     InputMethodManager imm = (InputMethodManager) getSystemService(
                             Context.INPUT_METHOD_SERVICE);
@@ -108,8 +113,7 @@ public class MainActivity extends MaterialNavigationDrawer {
             if(cardView.getVisibility() == View.INVISIBLE){
                 cardView.setVisibility(View.VISIBLE);
             }
-            EncodeNormalMorseManager message = new EncodeNormalMorseManager(input.getText().toString());
-            output.setText(message.getEncodedString());
+            output.setText(EncodeNormalMorseManager.getEncodedString(input.getText().toString()));
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -123,8 +127,8 @@ public class MainActivity extends MaterialNavigationDrawer {
             if(cardView.getVisibility() == View.INVISIBLE){
                 cardView.setVisibility(View.VISIBLE);
             }
-            DecodeNormalMorseManager message = new DecodeNormalMorseManager(input.getText().toString());
-            output.setText(message.getDecodedString());
+            output.setText(DecodeNormalMorseManager.getDecodedString(input.getText().toString()));
+
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -138,8 +142,7 @@ public class MainActivity extends MaterialNavigationDrawer {
             if(cardView.getVisibility() == View.INVISIBLE){
                 cardView.setVisibility(View.VISIBLE);
             }
-            EncodeWrittenMorseManager message = new EncodeWrittenMorseManager(input.getText().toString());
-            output.setText(message.getEncodedString());
+            output.setText(EncodeWrittenMorseManager.getEncodedString(input.getText().toString()));
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -153,12 +156,12 @@ public class MainActivity extends MaterialNavigationDrawer {
             if(cardView.getVisibility() == View.INVISIBLE){
                 cardView.setVisibility(View.VISIBLE);
             }
-            DecodeWrittenMorseManager message = new DecodeWrittenMorseManager(input.getText().toString());
-            output.setText(message.getDecodedString());
+            output.setText(DecodeWrittenMorseManager.getDecodedString(input.getText().toString()));
         } catch (Exception e){
             e.printStackTrace();
         }
     }
+
 
     //called when clicking on the version entry in the about fragment
     //opens the app page (de.marcelkapfer.morseconverter)

@@ -1,4 +1,4 @@
-package de.marcelkapfer.morseconverter;
+package de.marcelkapfer.morseconverter.fragments;
 
 import android.content.res.AssetManager;
 import android.os.Bundle;
@@ -14,7 +14,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.StringTokenizer;
+
+import de.marcelkapfer.morseconverter.adapter.WrittenMorseCodeAdapter;
+import de.marcelkapfer.morseconverter.R;
 
 
 public class writtenMorseListFragment extends Fragment {
@@ -40,7 +42,7 @@ public class writtenMorseListFragment extends Fragment {
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
         getDataset();
-        mAdapter = new MyAdapter(myLetter, myCode);
+        mAdapter = new WrittenMorseCodeAdapter(myLetter, myCode);
         mRecyclerView.setAdapter(mAdapter);
         return rootView;
     }

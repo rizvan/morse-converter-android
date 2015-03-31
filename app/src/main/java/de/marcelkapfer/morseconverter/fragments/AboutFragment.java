@@ -1,4 +1,4 @@
-package de.marcelkapfer.morseconverter;
+package de.marcelkapfer.morseconverter.fragments;
 
 /*
     This is a Android application for converting writtenMorse and normal morse code.
@@ -26,6 +26,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import de.marcelkapfer.morseconverter.R;
 
 /**
  * Created by mmk on 2/14/15.
