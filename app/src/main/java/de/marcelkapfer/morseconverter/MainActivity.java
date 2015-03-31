@@ -21,6 +21,7 @@ package de.marcelkapfer.morseconverter;
 
  */
 
+import android.app.Notification;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -28,19 +29,26 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import it.neokree.materialnavigationdrawer.elements.MaterialSection;
+import it.neokree.materialnavigationdrawer.util.MaterialActionBarDrawerToggle;
+
+import static android.view.inputmethod.InputMethodManager.*;
 
 
 public class MainActivity extends MaterialNavigationDrawer {
 
     //Declaring the Material Sections
     private MaterialSection writtenMorse, normalMorse, writtenMorseList, about;
+    MaterialActionBarDrawerToggle mDrawerToggle;
 
     //The MaterialNavigationDrawer init() methode replaces the normal  onCreate() methode
     @Override
@@ -62,6 +70,34 @@ public class MainActivity extends MaterialNavigationDrawer {
         allowArrowAnimation(); //Drawer Arrow rotations
         this.disableLearningPattern(); //Doesn't open the drawer always when the app starts
         setBackPattern(MaterialNavigationDrawer.BACKPATTERN_BACK_TO_FIRST);
+
+        mDrawerToggle = new MaterialActionBarDrawerToggle(this, null, null, 0, 0){
+
+            public void onDrawerClosed(View view){
+                super.onDrawerClosed(view);
+            }
+
+            public void onDrawerOpened(View view){
+                super.onDrawerOpened(view);
+                try {
+                    InputMethodManager imm = (InputMethodManager) getSystemService(
+                            Context.INPUT_METHOD_SERVICE);
+                    if (getCurrentSection() == writtenMorse) {
+                        EditText myEditText = (EditText) findViewById(R.id.editTextWrittenMorse);
+                        imm.hideSoftInputFromWindow(myEditText.getWindowToken(), 0);
+                    } else if (getCurrentSection() == normalMorse) {
+                        EditText myEditText = (EditText) findViewById(R.id.editTextNormalMorse);
+                        imm.hideSoftInputFromWindow(myEditText.getWindowToken(), 0);
+                    }
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+
+        };
+
+        this.setDrawerListener(mDrawerToggle);
+
     }
 
     public void normalMorseEncode(View view){
