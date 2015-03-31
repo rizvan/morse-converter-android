@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 
 public class writtenMorseListFragment extends Fragment {
@@ -21,7 +22,8 @@ public class writtenMorseListFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private String[] myDataset;
+    private String[] myLetter;
+    private String[] myCode;
     private static final String TAG = "RecyclerViewFragment";
 
     @Override
@@ -38,13 +40,14 @@ public class writtenMorseListFragment extends Fragment {
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
         getDataset();
-        mAdapter = new MyAdapter(myDataset);
+        mAdapter = new MyAdapter(myLetter, myCode);
         mRecyclerView.setAdapter(mAdapter);
         return rootView;
     }
 
     private void getDataset(){
-         ArrayList<String> dataset = new ArrayList<>();
+        ArrayList<String> letterset = new ArrayList<>();
+        ArrayList<String> codeset = new ArrayList<>();
         String datastring = "";
         AssetManager astmgr = getActivity().getAssets();
         try {
@@ -64,10 +67,18 @@ public class writtenMorseListFragment extends Fragment {
 
         for(int c = 0; datastring.length() > 1; c++){
             int pos = datastring.indexOf(";");
-            dataset.add(datastring.substring(0, pos));
+            String datasubstring = datastring.substring(0, pos);
+            int subpos = datasubstring.indexOf(":");
+            letterset.add(datasubstring.substring(0, subpos));
+            codeset.add(datasubstring.substring(subpos + 1, pos));
             datastring = datastring.substring(pos + 1);
-            myDataset = dataset.toArray(new String[dataset.size()]);
         }
+        letterset.add(":");
+        letterset.add(";");
+        codeset.add("111000");
+        codeset.add("101010");
+        myLetter = letterset.toArray(new String[letterset.size()]);
+        myCode = codeset.toArray(new String[letterset.size()]);
     }
 
 }

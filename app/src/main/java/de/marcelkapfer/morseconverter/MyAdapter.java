@@ -10,23 +10,25 @@ import android.widget.TextView;
  * Created by mmk on 3/30/15.
  */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private String[] mDataset;
+    private String[] mLetter;
+    private String[] mCode;
+    private static String mType = "LETTER";
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView mTextView;
+        public TextView mLetterView;
+        public TextView mCodeView;
         public ViewHolder(View v) {
             super(v);
-            mTextView = (TextView) v.findViewById(R.id.codefield);
+            mLetterView = (TextView) v.findViewById(R.id.letterfield);
+            mCodeView = (TextView) v.findViewById(R.id.codefield);
         }
 
-        public TextView getTextView() {
-            return mTextView;
-        }
     }
 
-    public MyAdapter(String[] myDataset) {
-        mDataset = myDataset;
+    public MyAdapter(String[] myLetter, String[] myCode) {
+        mLetter = myLetter;
+        mCode = myCode;
     }
 
     @Override
@@ -42,12 +44,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.mTextView.setText(mDataset[position]);
+        holder.mLetterView.setText(mLetter[position]);
+        holder.mCodeView.setText(mCode[position]);
 
     }
 
     @Override
     public int getItemCount() {
-        return mDataset.length;
+        return mCode.length;
     }
 }
