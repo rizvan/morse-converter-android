@@ -82,4 +82,9 @@
         <item name="android:layout_width">match_parent</item>
     </style>
 
+    <style name="RippleField">
+        <item name="android:background">@drawable/button_action</item>
+        <item name="android:src">@color/cardview_light_background</item>
+    </style>
+
 </resources>

@@ -43,13 +43,13 @@
     <string name="sectionHow">How to</string>
     <string name="sectionMissing">Missing Code</string>
     <!--About Texts-->
-    <string name="aboutVersion">2.1\n10th March 2015</string>
+    <string name="aboutVersion">2.2 beta\n15 May 2015</string>
     <string name="aboutDeveloper" translatable="false">Marcel Michael Kapfer</string>
-    <string name="aboutWebsite" translatable="false">marcel-kapfer.de/projects/morse/</string>
+    <string name="aboutWebsite" translatable="false">marcel-kapfer.de/writtenmorse</string>
     <string name="aboutContact" translatable="false">marcelmichaelkapfer@yahoo.co.nz</string>
     <string name="aboutLicense" translatable="false">GNU GPL v3.0</string>
     <string name="aboutBug">If you found a bug, please write me a mail to marcelmichaelkapfer@yahoo.co.nz with a short description of the problem.</string>
-    <string name="aboutHow">You can find a detailed guide on marcel-kapfer.de/projects/morse/index.html#howto_android</string>
+    <string name="aboutHow">You can find a detailed guide on marcel-kapfer.de/writtenmorse/index.php#howto_android</string>
     <string name="aboutMissing">If you discovered, that code is missing, then write me a mail to marcelmichaelkapfer@yahoo.co.nz and tell me about it.</string>
     <!--Drawer Titles-->
     <string name="about">About</string>
@@ -58,6 +58,7 @@
     <string name="button_share">SHARE</string>
     <string name="button_copy">COPY</string>
 
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--Donate Dialog-->
+    <string name="donate_title">Donate the developer</string>
+
 </resources>

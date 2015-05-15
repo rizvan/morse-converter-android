@@ -34,6 +34,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
+
 import de.marcelkapfer.morseconverter.engine.DecodeNormalMorseManager;
 import de.marcelkapfer.morseconverter.engine.DecodeWrittenMorseManager;
 import de.marcelkapfer.morseconverter.engine.EncodeNormalMorseManager;
@@ -45,29 +48,47 @@ import de.marcelkapfer.morseconverter.fragments.writtenMorseListFragment;
 
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import it.neokree.materialnavigationdrawer.elements.MaterialSection;
+import it.neokree.materialnavigationdrawer.elements.listeners.MaterialSectionListener;
 import it.neokree.materialnavigationdrawer.util.MaterialActionBarDrawerToggle;
 
 
-public class MainActivity extends MaterialNavigationDrawer {
+public class MainActivity extends MaterialNavigationDrawer implements BillingProcessor.IBillingHandler {
 
     //Declaring the Material Sections
-    private MaterialSection writtenMorse, normalMorse, writtenMorseList, about;
-    MaterialActionBarDrawerToggle mDrawerToggle;
+    private MaterialSection writtenMorse, normalMorse, writtenMorseList, donate, about;
+    private MaterialActionBarDrawerToggle mDrawerToggle;
+
+    BillingProcessor bp;
 
     //The MaterialNavigationDrawer init() methode replaces the normal  onCreate() methode
     @Override
     public void init(Bundle savedInstanceState) {
+
+        bp = new BillingProcessor(this, "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkmhshG72hHv9OmduVGxio5jyhC9M4CRGp099vtYHmZGaVCq/hpzUhgu7z/H3ioPSc325W13o3qYGpY4GLwe7MAtnSfTIT2fBu6l3kv9lgyYG0qSnDxZVOikf4Bfj7LE/g1OEr/++MqcD2hg1EBMqIgVyB6qOXgXkrHBSj2pf2Rko1SXNmeZ/MiTFx1VRB0PPRf01hPWU1bxZUizh3hdgWiATuTJCCYR0vpfb4IlQDF5wGS4AGHgIz5Qhh5ZZ+XQDTHv7SDdodSdLc02a/Zy0/9bxTIh8yy/Lg1JbPdh5rvWK/HeEH/wAYmwc8xQoQL264wjTQqKUZ+7iisHwS9ZtowIDAQAB", this);
+
+        // Restore purchases
+        bp.loadOwnedPurchasesFromGoogle();
+
         Resources res = getResources();
         //Declaring the Material Sections
         writtenMorse = this.newSection("writtenMorse", new MainFragment());
         normalMorse = this.newSection(res.getString(R.string.normalMorse), new MorseFragment());
-        writtenMorseList = this.newSection("writtenMorse Codes", new writtenMorseListFragment()); //TODO rename
+        writtenMorseList = this.newSection("writtenMorse Codes", new writtenMorseListFragment());
         about = this.newSection(res.getString(R.string.about), new AboutFragment());
+        donate = this.newSection(res.getString(R.string.donate_title), new MaterialSectionListener() {
+                    @Override
+                    public void onClick(MaterialSection materialSection) {
+                        bp.purchase(MainActivity.this, "donate");
+                        donate.unSelect();
+                    }
+                }
+        );
         //Adding the Sections
         this.addSection(writtenMorse);
         this.addSection(normalMorse);
         this.addDivisor();
         this.addSection(writtenMorseList);
+        this.addBottomSection(donate);
         this.addBottomSection(about);
         //set drawer image
         this.setDrawerHeaderImage(this.getResources().getDrawable(R.drawable.feature_graphics));
@@ -103,6 +124,51 @@ public class MainActivity extends MaterialNavigationDrawer {
 
         this.setDrawerListener(mDrawerToggle);
 
+    }
+
+    // IBillingHandler implementation
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (!bp.handleActivityResult(requestCode, resultCode, data))
+            super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    public void onBillingInitialized() {
+        /*
+         * Called then BillingProcessor was initialized and its ready to purchase
+         */
+    }
+
+    @Override
+    public void onProductPurchased(String productId, TransactionDetails details) {
+        /*
+         * Called then requested PRODUCT ID was successfully purchased
+         */
+    }
+
+    @Override
+    public void onBillingError(int errorCode, Throwable error) {
+        /*
+         * Called then some error occured. See Constants class for more details
+         */
+    }
+
+    @Override
+    public void onPurchaseHistoryRestored() {
+        /*
+         * Called then purchase history was restored and the list of all owned PRODUCT ID's
+         * was loaded from Google Play
+         */
+    }
+
+    @Override
+    public void onDestroy() {
+        if (bp != null)
+            bp.release();
+
+        super.onDestroy();
     }
 
     public void normalMorseEncode(View view){
@@ -286,4 +352,5 @@ public class MainActivity extends MaterialNavigationDrawer {
         ClipData clip = ClipData.newPlainText("Message", string);
         clipboard.setPrimaryClip(clip);
     }
+
 }

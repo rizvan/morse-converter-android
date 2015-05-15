@@ -36,9 +36,9 @@
     <string name="about">Über</string>
     <string name="normalMorse">Normales Morse</string>
     <string name="aboutBug">Wenn Du einen Fehler gefunden hast, schreibe mit bitte ein Email an marcelmichaelkapfer@yahoo.co.nz</string>
-    <string name="aboutHow">Du kannst eine ausführliche Anwendung auf marcel-kapfer.de/projects/morse/index.html#howto_android finden.</string>
+    <string name="aboutHow">Du kannst eine ausführliche Anwendung auf marcel-kapfer.de/writtenmorse/index.html#howto_android finden.</string>
     <string name="aboutMissing">Wenn du auf einen fehlenden Code aufmerksam geworden bist, dann schreibe eine Email an marcelmichaelkapfer@yahoo.co.nz.</string>
-    <string name="aboutVersion">2.1 \n10. März 2015</string>
+    <string name="aboutVersion">2.2 beta \n15. Mai 2015</string>
     <string name="sectionBug">Fehler</string>
     <string name="sectionContact">Kontakt</string>
     <string name="sectionDeveloper">Entwickler</string>
@@ -48,4 +48,7 @@
     <!--Output Text Buttons-->
     <string name="button_share">TEILEN</string>
     <string name="button_copy">KOPIEREN</string>
+
+    <!--Donate Dialog-->
+    <string name="donate_title">Unterstütze den Entwickler</string>
 </resources>
