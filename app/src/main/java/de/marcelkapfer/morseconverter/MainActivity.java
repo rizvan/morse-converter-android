@@ -58,6 +58,7 @@ public class MainActivity extends MaterialNavigationDrawer implements BillingPro
     private MaterialSection writtenMorse, normalMorse, writtenMorseList, donate, about;
     private MaterialActionBarDrawerToggle mDrawerToggle;
 
+    //Declaring the billing processor
     BillingProcessor bp;
 
     //The MaterialNavigationDrawer init() methode replaces the normal  onCreate() methode
@@ -88,7 +89,9 @@ public class MainActivity extends MaterialNavigationDrawer implements BillingPro
         this.addSection(normalMorse);
         this.addDivisor();
         this.addSection(writtenMorseList);
-        this.addBottomSection(donate);
+        if(!bp.isPurchased("donate")) {
+            this.addBottomSection(donate);
+        }
         this.addBottomSection(about);
         //set drawer image
         this.setDrawerHeaderImage(this.getResources().getDrawable(R.drawable.feature_graphics));
