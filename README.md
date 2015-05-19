@@ -21,6 +21,10 @@ You can also check out the issues and the Trello board.
 
 [Feature & Development Board](https://trello.com/b/SGMIGVbI/morse-android)
 
+## Beta testing
+
+Would you like to test new features before they land in the public version? Just join the [Google+ community](https://plus.google.com/communities/103668718628585126049).
+
 ## Used Libraries
 
 [Neokree's Material Navigation Drawer](https://github.com/neokree/MaterialNavigationDrawer)
